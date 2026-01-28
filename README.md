@@ -25,5 +25,15 @@ This project focuses on recreating the core UI and basic user flow of Instagram.
 ## 📂 Project Status
 Frontend/UI focused learning project.
 
+
+## 📸 App Screenshots
+
+<img src="screenshots/s1.png" width="250" />
+<img src="screenshots/s2.png" width="250" />
+<img src="screenshots/s3.png" width="250" />
+<img src="screenshots/s4.png" width="250" />
+<img src="screenshots/s5.png" width="250" />
+
+
 ---
 Made with ❤️ by Manvi
