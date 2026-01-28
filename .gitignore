@@ -41,3 +41,11 @@ app-example
 # generated native folders
 /ios
 /android
+node_modules/
+.expo/
+.expo-shared/
+.env
+.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
