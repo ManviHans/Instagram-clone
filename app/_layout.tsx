@@ -1,24 +1,20 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import { router, Stack } from "expo-router";
+import { Pressable, Image } from "react-native";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Stack
+      screenOptions={{
+        headerShown: false, 
+        headerShadowVisible:false,  
+        title: "",           
+        headerLeft: () => (
+          <Pressable onPress={() => router.back()}>
+           <Image source={require('@/assets/images/arrow-left.png')}
+           style = {{ width: 24, height: 24, resizeMode: 'contain'}}/>
+          </Pressable>
+        ),
+      }}
+    />
   );
 }
